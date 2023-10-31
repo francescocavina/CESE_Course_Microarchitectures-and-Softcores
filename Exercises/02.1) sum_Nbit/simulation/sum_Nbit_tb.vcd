@@ -1,0 +1,65 @@
+$date
+	Mon Oct 30 23:53:03 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module sum_Nbit_tb $end
+$var wire 4 ! s_tb [3:0] $end
+$var wire 1 " co_tb $end
+$var parameter 32 # N $end
+$var reg 4 $ a_tb [3:0] $end
+$var reg 4 % b_tb [3:0] $end
+$var reg 1 & ci_tb $end
+$scope module DUT $end
+$var wire 4 ' a [3:0] $end
+$var wire 4 ( b [3:0] $end
+$var wire 1 & ci $end
+$var wire 6 ) sum_aux [5:0] $end
+$var wire 4 * s [3:0] $end
+$var wire 1 " co $end
+$var parameter 32 + N $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b100 +
+b100 #
+$end
+#0
+$dumpvars
+b0 *
+b1 )
+b0 (
+b0 '
+0&
+b0 %
+b0 $
+0"
+b0 !
+$end
+#10
+b1011 !
+b1011 *
+b11 %
+b11 (
+b10111 )
+b1000 $
+b1000 '
+#20
+b1100 !
+b1100 *
+b11000 )
+1&
+#30
+b11 !
+b11 *
+1"
+b100110 )
+b1010 %
+b1010 (
+#1000

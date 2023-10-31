@@ -4,7 +4,7 @@
 `timescale 1 ns / 100 ps
 
 module sum_1bit_tb;
-    // DUT Input Signals
+    // Declare DUT Input Signals
     reg a_tb, b_tb, ci_tb;
     wire s_tb, co_tb;
 

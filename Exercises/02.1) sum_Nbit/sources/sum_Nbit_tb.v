@@ -1,18 +1,20 @@
 // Author: Francesco Cavina <francescocavina98@gmail.com>
-// Brief:  This is the testbench of a 4 bit full adder
+// Brief:  This is the testbench of a N bit full adder
 
-`timescale 1 ns / 100 ps
+module sum_Nbit_tb;
 
-module sum_4bit_tb;
+    // Declare paramenters
+    localparam N = 4;
+
     // Declare DUT Input Signals
-    reg  [3:0] a_tb, b_tb;
+    reg  [N-1:0] a_tb, b_tb;
     reg  ci_tb;
-    wire [3:0] s_tb;
+    wire [N-1:0] s_tb;
     wire co_tb;
 
     initial begin
-    $dumpfile("sum_4bit_tb.vcd"); // Create a file in which variables will be allocated
-    $dumpvars(0, sum_4bit_tb);    // Allocate desing variables in the created file
+    $dumpfile("sum_Nbit_tb.vcd"); // Create a file in which variables will be allocated
+    $dumpvars(0, sum_Nbit_tb);    // Allocate desing variables in the created file
     #1000 $finish;                // Simulation duration
     end
 
@@ -31,5 +33,16 @@ module sum_4bit_tb;
     end
 
     // DUT Instantiation
-    sum_4bit DUT(.a(a_tb), .b(b_tb), .ci(ci_tb), .s(s_tb), .co(co_tb));
+    sum_Nbit
+        #(
+            .N(N)
+        ) 
+        DUT
+        (
+            .a(a_tb), 
+            .b(b_tb), 
+            .ci(ci_tb), 
+            .s(s_tb), 
+            .co(co_tb)
+        );
 endmodule;
