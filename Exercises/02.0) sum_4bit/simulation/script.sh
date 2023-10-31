@@ -4,10 +4,10 @@
 #! /bin/bash
 
 # Compile the Verilog files
-iverilog -o sum_1bit ../sources/sum_1bit.v ../sources/sum_1bit_tb.v
+iverilog -o sum_4bit ../sources/sum_4bit.v ../sources/sum_4bit_tb.v
 
 # Run simulation
-vvp sum_1bit
+vvp sum_4bit
 
 # Open the waveform using GTKWave
-gtkwave sum_1bit_tb.vcd
+gtkwave sum_4bit_tb.vcd

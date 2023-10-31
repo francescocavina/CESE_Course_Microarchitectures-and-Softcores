@@ -1,0 +1,78 @@
+#! /usr/local/bin/vvp
+:ivl_version "12.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 10;
+:vpi_module "/usr/local/lib/ivl/system.vpi";
+:vpi_module "/usr/local/lib/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/local/lib/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/local/lib/ivl/v2005_math.vpi";
+:vpi_module "/usr/local/lib/ivl/va_math.vpi";
+S_0x55bc076d0140 .scope module, "sum_4bit_tb" "sum_4bit_tb" 2 6;
+ .timescale -9 -10;
+v0x55bc076e61a0_0 .var "a_tb", 3 0;
+v0x55bc076e6280_0 .var "b_tb", 3 0;
+v0x55bc076e6320_0 .var "ci_tb", 0 0;
+v0x55bc076e63f0_0 .net "co_tb", 0 0, L_0x55bc076e6c90;  1 drivers
+v0x55bc076e64c0_0 .net "s_tb", 3 0, L_0x55bc076e6b20;  1 drivers
+S_0x55bc076d02d0 .scope module, "DUT" "sum_4bit" 2 34, 3 4 0, S_0x55bc076d0140;
+ .timescale 0 0;
+    .port_info 0 /INPUT 4 "a";
+    .port_info 1 /INPUT 4 "b";
+    .port_info 2 /INPUT 1 "ci";
+    .port_info 3 /OUTPUT 4 "s";
+    .port_info 4 /OUTPUT 1 "co";
+L_0x7fdc48c4e018 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v0x55bc076d0460_0 .net/2u *"_ivl_0", 0 0, L_0x7fdc48c4e018;  1 drivers
+v0x55bc076e5850_0 .net *"_ivl_2", 5 0, L_0x55bc076e6590;  1 drivers
+L_0x7fdc48c4e060 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v0x55bc076e5930_0 .net/2u *"_ivl_4", 0 0, L_0x7fdc48c4e060;  1 drivers
+L_0x7fdc48c4e0a8 .functor BUFT 1, C4<1>, C4<0>, C4<0>, C4<0>;
+v0x55bc076e59f0_0 .net/2u *"_ivl_6", 0 0, L_0x7fdc48c4e0a8;  1 drivers
+v0x55bc076e5ad0_0 .net *"_ivl_8", 5 0, L_0x55bc076e6780;  1 drivers
+v0x55bc076e5c00_0 .net "a", 3 0, v0x55bc076e61a0_0;  1 drivers
+v0x55bc076e5ce0_0 .net "b", 3 0, v0x55bc076e6280_0;  1 drivers
+v0x55bc076e5dc0_0 .net "ci", 0 0, v0x55bc076e6320_0;  1 drivers
+v0x55bc076e5e80_0 .net "co", 0 0, L_0x55bc076e6c90;  alias, 1 drivers
+v0x55bc076e5f40_0 .net "s", 3 0, L_0x55bc076e6b20;  alias, 1 drivers
+v0x55bc076e6020_0 .net "sum_aux", 5 0, L_0x55bc076e6970;  1 drivers
+L_0x55bc076e6590 .concat [ 1 4 1 0], v0x55bc076e6320_0, v0x55bc076e61a0_0, L_0x7fdc48c4e018;
+L_0x55bc076e6780 .concat [ 1 4 1 0], L_0x7fdc48c4e0a8, v0x55bc076e6280_0, L_0x7fdc48c4e060;
+L_0x55bc076e6970 .arith/sum 6, L_0x55bc076e6590, L_0x55bc076e6780;
+L_0x55bc076e6b20 .part L_0x55bc076e6970, 1, 4;
+L_0x55bc076e6c90 .part L_0x55bc076e6970, 5, 1;
+    .scope S_0x55bc076d0140;
+T_0 ;
+    %vpi_call 2 14 "$dumpfile", "sum_4bit_tb.vcd" {0 0 0};
+    %vpi_call 2 15 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x55bc076d0140 {0 0 0};
+    %delay 10000, 0;
+    %vpi_call 2 16 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+    .scope S_0x55bc076d0140;
+T_1 ;
+    %vpi_call 2 20 "$display", $time, " << Starting the Simulation >>" {0 0 0};
+    %pushi/vec4 0, 0, 4;
+    %store/vec4 v0x55bc076e61a0_0, 0, 4;
+    %pushi/vec4 0, 0, 4;
+    %store/vec4 v0x55bc076e6280_0, 0, 4;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x55bc076e6320_0, 0, 1;
+    %delay 100, 0;
+    %pushi/vec4 8, 0, 4;
+    %store/vec4 v0x55bc076e61a0_0, 0, 4;
+    %pushi/vec4 3, 0, 4;
+    %store/vec4 v0x55bc076e6280_0, 0, 4;
+    %delay 100, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x55bc076e6320_0, 0, 1;
+    %delay 100, 0;
+    %pushi/vec4 10, 0, 4;
+    %store/vec4 v0x55bc076e6280_0, 0, 4;
+    %end;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "../sources/sum_4bit_tb.v";
+    "../sources/sum_4bit.v";
