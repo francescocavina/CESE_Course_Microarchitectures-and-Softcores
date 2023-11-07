@@ -1,7 +1,9 @@
 // Author: Francesco Cavina <francescocavina98@gmail.com>
-// Brief:  This is the testbench of a 4 bit full adder/substractor
+// Brief:  This is the testbench of an N bit full full adder/substractor
 
-module sum_sub_4bit_tb;
+module sum_sub_Nbit_tb;
+    // Delcare local parameters
+    localparam N_tb = 4;
     // Declare DUT Input Signals
     reg  [3:0] a_tb, b_tb;
     reg  ci_tb, sel_tb;
@@ -9,8 +11,8 @@ module sum_sub_4bit_tb;
     wire co_tb;
 
     initial begin
-        $dumpfile("sum_sub_4bit_tb.vcd"); // Create a file in which variables will be allocated
-        $dumpvars(0, sum_sub_4bit_tb);    // Allocate desing variables in the created file
+        $dumpfile("sum_sub_Nbit_tb.vcd"); // Create a file in which variables will be allocated
+        $dumpvars(0, sum_sub_Nbit_tb);    // Allocate desing variables in the created file
         #1000 $finish;                    // Simulation duration
     end
 
@@ -34,7 +36,12 @@ module sum_sub_4bit_tb;
     end
 
     // DUT Instantiation
-    sum_sub_4bit DUT (
+    sum_sub_Nbit 
+        #(
+            .N(N_tb)
+        )
+        DUT
+        (
             .a(a_tb),
             .b(b_tb),
             .ci(ci_tb),
