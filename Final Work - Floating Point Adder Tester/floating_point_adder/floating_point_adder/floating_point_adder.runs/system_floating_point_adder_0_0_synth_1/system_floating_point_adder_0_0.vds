@@ -1,0 +1,517 @@
+#-----------------------------------------------------------
+# Vivado v2018.1 (64-bit)
+# SW Build 2188600 on Wed Apr  4 18:39:19 MDT 2018
+# IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+# Start of session at: Tue Dec  5 02:50:07 2023
+# Process ID: 698104
+# Current directory: /home/francesco/Desktop/tp/floating_point_adder/floating_point_adder/floating_point_adder.runs/system_floating_point_adder_0_0_synth_1
+# Command line: vivado -log system_floating_point_adder_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source system_floating_point_adder_0_0.tcl
+# Log file: /home/francesco/Desktop/tp/floating_point_adder/floating_point_adder/floating_point_adder.runs/system_floating_point_adder_0_0_synth_1/system_floating_point_adder_0_0.vds
+# Journal file: /home/francesco/Desktop/tp/floating_point_adder/floating_point_adder/floating_point_adder.runs/system_floating_point_adder_0_0_synth_1/vivado.jou
+#-----------------------------------------------------------
+source system_floating_point_adder_0_0.tcl -notrace
+Command: synth_design -top system_floating_point_adder_0_0 -part xc7z010clg400-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 698126 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1260.480 ; gain = 86.000 ; free physical = 3610 ; free virtual = 17808
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'system_floating_point_adder_0_0' [/home/francesco/Desktop/tp/floating_point_adder/floating_point_adder/floating_point_adder.srcs/sources_1/bd/system/ip/system_floating_point_adder_0_0/synth/system_floating_point_adder_0_0.vhd:82]
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 5 - type: integer 
+INFO: [Synth 8-3491] module 'floating_point_adder_ip_v1_0' declared at '/home/francesco/Desktop/tp/floating_point_adder/floating_point_adder/floating_point_adder.srcs/sources_1/bd/system/ipshared/60c2/hdl/floating_point_adder_ip_v1_0.vhd:5' bound to instance 'U0' of component 'floating_point_adder_ip_v1_0' [/home/francesco/Desktop/tp/floating_point_adder/floating_point_adder/floating_point_adder.srcs/sources_1/bd/system/ip/system_floating_point_adder_0_0/synth/system_floating_point_adder_0_0.vhd:148]
+INFO: [Synth 8-638] synthesizing module 'floating_point_adder_ip_v1_0' [/home/francesco/Desktop/tp/floating_point_adder/floating_point_adder/floating_point_adder.srcs/sources_1/bd/system/ipshared/60c2/hdl/floating_point_adder_ip_v1_0.vhd:49]
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 5 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 5 - type: integer 
+INFO: [Synth 8-3491] module 'floating_point_adder_ip_v1_0_S_AXI' declared at '/home/francesco/Desktop/tp/floating_point_adder/floating_point_adder/floating_point_adder.srcs/sources_1/bd/system/ipshared/60c2/hdl/floating_point_adder_ip_v1_0_S_AXI.vhd:5' bound to instance 'floating_point_adder_ip_v1_0_S_AXI_inst' of component 'floating_point_adder_ip_v1_0_S_AXI' [/home/francesco/Desktop/tp/floating_point_adder/floating_point_adder/floating_point_adder.srcs/sources_1/bd/system/ipshared/60c2/hdl/floating_point_adder_ip_v1_0.vhd:85]
+INFO: [Synth 8-638] synthesizing module 'floating_point_adder_ip_v1_0_S_AXI' [/home/francesco/Desktop/tp/floating_point_adder/floating_point_adder/floating_point_adder.srcs/sources_1/bd/system/ipshared/60c2/hdl/floating_point_adder_ip_v1_0_S_AXI.vhd:86]
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 5 - type: integer 
+INFO: [Synth 8-226] default block is never used [/home/francesco/Desktop/tp/floating_point_adder/floating_point_adder/floating_point_adder.srcs/sources_1/bd/system/ipshared/60c2/hdl/floating_point_adder_ip_v1_0_S_AXI.vhd:242]
+INFO: [Synth 8-226] default block is never used [/home/francesco/Desktop/tp/floating_point_adder/floating_point_adder/floating_point_adder.srcs/sources_1/bd/system/ipshared/60c2/hdl/floating_point_adder_ip_v1_0_S_AXI.vhd:408]
+INFO: [Synth 8-638] synthesizing module 'floating_point_adder' [/home/francesco/Desktop/tp/floating_point_adder/floating_point_adder/floating_point_adder.srcs/sources_1/bd/system/ipshared/60c2/src/floating_point_adder.vhd:36]
+	Parameter PRECISION_BITS bound to: 32 - type: integer 
+	Parameter EXPONENT_BITS bound to: 8 - type: integer 
+	Parameter MANTISSA_BITS bound to: 23 - type: integer 
+	Parameter SIGN_BITS bound to: 1 - type: integer 
+WARNING: [Synth 8-6014] Unused sequential element guard_bit_reg was removed.  [/home/francesco/Desktop/tp/floating_point_adder/floating_point_adder/floating_point_adder.srcs/sources_1/bd/system/ipshared/60c2/src/floating_point_adder.vhd:227]
+WARNING: [Synth 8-6014] Unused sequential element round_bit_reg was removed.  [/home/francesco/Desktop/tp/floating_point_adder/floating_point_adder/floating_point_adder.srcs/sources_1/bd/system/ipshared/60c2/src/floating_point_adder.vhd:228]
+WARNING: [Synth 8-6014] Unused sequential element sticky_bit_reg was removed.  [/home/francesco/Desktop/tp/floating_point_adder/floating_point_adder/floating_point_adder.srcs/sources_1/bd/system/ipshared/60c2/src/floating_point_adder.vhd:231]
+INFO: [Synth 8-256] done synthesizing module 'floating_point_adder' (1#1) [/home/francesco/Desktop/tp/floating_point_adder/floating_point_adder/floating_point_adder.srcs/sources_1/bd/system/ipshared/60c2/src/floating_point_adder.vhd:36]
+WARNING: [Synth 8-6014] Unused sequential element slv_reg3_reg was removed.  [/home/francesco/Desktop/tp/floating_point_adder/floating_point_adder/floating_point_adder.srcs/sources_1/bd/system/ipshared/60c2/hdl/floating_point_adder_ip_v1_0_S_AXI.vhd:234]
+WARNING: [Synth 8-6014] Unused sequential element slv_reg4_reg was removed.  [/home/francesco/Desktop/tp/floating_point_adder/floating_point_adder/floating_point_adder.srcs/sources_1/bd/system/ipshared/60c2/hdl/floating_point_adder_ip_v1_0_S_AXI.vhd:235]
+WARNING: [Synth 8-6014] Unused sequential element loc_addr_reg was removed.  [/home/francesco/Desktop/tp/floating_point_adder/floating_point_adder/floating_point_adder.srcs/sources_1/bd/system/ipshared/60c2/hdl/floating_point_adder_ip_v1_0_S_AXI.vhd:240]
+INFO: [Synth 8-256] done synthesizing module 'floating_point_adder_ip_v1_0_S_AXI' (2#1) [/home/francesco/Desktop/tp/floating_point_adder/floating_point_adder/floating_point_adder.srcs/sources_1/bd/system/ipshared/60c2/hdl/floating_point_adder_ip_v1_0_S_AXI.vhd:86]
+INFO: [Synth 8-256] done synthesizing module 'floating_point_adder_ip_v1_0' (3#1) [/home/francesco/Desktop/tp/floating_point_adder/floating_point_adder/floating_point_adder.srcs/sources_1/bd/system/ipshared/60c2/hdl/floating_point_adder_ip_v1_0.vhd:49]
+INFO: [Synth 8-256] done synthesizing module 'system_floating_point_adder_0_0' (4#1) [/home/francesco/Desktop/tp/floating_point_adder/floating_point_adder/floating_point_adder.srcs/sources_1/bd/system/ip/system_floating_point_adder_0_0/synth/system_floating_point_adder_0_0.vhd:82]
+WARNING: [Synth 8-3331] design floating_point_adder_ip_v1_0_S_AXI has unconnected port S_AXI_AWPROT[2]
+WARNING: [Synth 8-3331] design floating_point_adder_ip_v1_0_S_AXI has unconnected port S_AXI_AWPROT[1]
+WARNING: [Synth 8-3331] design floating_point_adder_ip_v1_0_S_AXI has unconnected port S_AXI_AWPROT[0]
+WARNING: [Synth 8-3331] design floating_point_adder_ip_v1_0_S_AXI has unconnected port S_AXI_ARPROT[2]
+WARNING: [Synth 8-3331] design floating_point_adder_ip_v1_0_S_AXI has unconnected port S_AXI_ARPROT[1]
+WARNING: [Synth 8-3331] design floating_point_adder_ip_v1_0_S_AXI has unconnected port S_AXI_ARPROT[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1318.090 ; gain = 143.609 ; free physical = 3569 ; free virtual = 17768
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1318.090 ; gain = 143.609 ; free physical = 3545 ; free virtual = 17744
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1318.090 ; gain = 143.609 ; free physical = 3545 ; free virtual = 17745
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.45 ; elapsed = 00:00:00.09 . Memory (MB): peak = 1685.711 ; gain = 7.000 ; free physical = 2810 ; free virtual = 17010
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:23 ; elapsed = 00:00:34 . Memory (MB): peak = 1685.711 ; gain = 511.230 ; free physical = 2972 ; free virtual = 17173
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:23 ; elapsed = 00:00:34 . Memory (MB): peak = 1685.711 ; gain = 511.230 ; free physical = 2972 ; free virtual = 17173
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:34 . Memory (MB): peak = 1685.711 ; gain = 511.230 ; free physical = 2974 ; free virtual = 17175
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/home/francesco/Desktop/tp/floating_point_adder/floating_point_adder/floating_point_adder.srcs/sources_1/bd/system/ipshared/60c2/src/floating_point_adder.vhd:165]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/home/francesco/Desktop/tp/floating_point_adder/floating_point_adder/floating_point_adder.srcs/sources_1/bd/system/ipshared/60c2/src/floating_point_adder.vhd:153]
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'floating_point_adder'
+WARNING: [Synth 8-6014] Unused sequential element next_state_reg was removed.  [/home/francesco/Desktop/tp/floating_point_adder/floating_point_adder/floating_point_adder.srcs/sources_1/bd/system/ipshared/60c2/src/floating_point_adder.vhd:84]
+INFO: [Synth 8-5544] ROM "c_o" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+              wait_state |                              000 |                              000
+         alignment_state |                              001 |                              001
+          addition_state |                              010 |                              010
+     normalization_state |                              011 |                              011
+          rounding_state |                              100 |                              100
+   renormalization_state |                              101 |                              101
+              done_state |                              110 |                              110
+                  iSTATE |                              111 |                              111
+*
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using encoding 'sequential' in module 'floating_point_adder'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:24 ; elapsed = 00:00:35 . Memory (MB): peak = 1685.711 ; gain = 511.230 ; free physical = 2924 ; free virtual = 17126
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+----------------------------------------+------------+----------+
+|      |RTL Partition                           |Replication |Instances |
++------+----------------------------------------+------------+----------+
+|1     |floating_point_adder__GB0               |           1|     29989|
+|2     |floating_point_adder__GB1               |           1|     10851|
+|3     |floating_point_adder__GB2               |           1|     15195|
+|4     |floating_point_adder_ip_v1_0_S_AXI__GC0 |           1|      1260|
++------+----------------------------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3538] Detected potentially large (wide) register sum_mantissa_aux_reg [/home/francesco/Desktop/tp/floating_point_adder/floating_point_adder/floating_point_adder.srcs/sources_1/bd/system/ipshared/60c2/src/floating_point_adder.vhd:253]
+INFO: [Synth 8-3538] Detected potentially large (wide) register mantissa_b_aux_reg [/home/francesco/Desktop/tp/floating_point_adder/floating_point_adder/floating_point_adder.srcs/sources_1/bd/system/ipshared/60c2/src/floating_point_adder.vhd:124]
+INFO: [Synth 8-3538] Detected potentially large (wide) register mantissa_a_aux_reg [/home/francesco/Desktop/tp/floating_point_adder/floating_point_adder/floating_point_adder.srcs/sources_1/bd/system/ipshared/60c2/src/floating_point_adder.vhd:123]
+INFO: [Synth 8-3538] Detected potentially large (wide) register sum_mantissa_reg [/home/francesco/Desktop/tp/floating_point_adder/floating_point_adder/floating_point_adder.srcs/sources_1/bd/system/ipshared/60c2/src/floating_point_adder.vhd:156]
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   1048 Bit       Adders := 1     
+	   3 Input   1048 Bit       Adders := 1     
+	   2 Input     11 Bit       Adders := 1     
+	   2 Input      9 Bit       Adders := 2     
+	   3 Input      9 Bit       Adders := 2     
++---Registers : 
+	             1048 Bit    Registers := 4     
+	               32 Bit    Registers := 8     
+	               25 Bit    Registers := 2     
+	                9 Bit    Registers := 2     
+	                8 Bit    Registers := 2     
+	                5 Bit    Registers := 2     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 10    
++---Muxes : 
+	   2 Input   1048 Bit        Muxes := 16    
+	   8 Input   1048 Bit        Muxes := 3     
+	   2 Input     32 Bit        Muxes := 6     
+	   8 Input     32 Bit        Muxes := 6     
+	   8 Input      9 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 3     
+	   2 Input      8 Bit        Muxes := 2     
+	   8 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 5     
+	   8 Input      1 Bit        Muxes := 11    
+	   2 Input      1 Bit        Muxes := 18    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3538] Detected potentially large (wide) register sum_mantissa_aux_reg [/home/francesco/Desktop/tp/floating_point_adder/floating_point_adder/floating_point_adder.srcs/sources_1/bd/system/ipshared/60c2/src/floating_point_adder.vhd:253]
+INFO: [Synth 8-3538] Detected potentially large (wide) register mantissa_b_aux_reg [/home/francesco/Desktop/tp/floating_point_adder/floating_point_adder/floating_point_adder.srcs/sources_1/bd/system/ipshared/60c2/src/floating_point_adder.vhd:124]
+INFO: [Synth 8-3538] Detected potentially large (wide) register mantissa_a_aux_reg [/home/francesco/Desktop/tp/floating_point_adder/floating_point_adder/floating_point_adder.srcs/sources_1/bd/system/ipshared/60c2/src/floating_point_adder.vhd:123]
+INFO: [Synth 8-3538] Detected potentially large (wide) register sum_mantissa_reg [/home/francesco/Desktop/tp/floating_point_adder/floating_point_adder/floating_point_adder.srcs/sources_1/bd/system/ipshared/60c2/src/floating_point_adder.vhd:156]
+Hierarchical RTL Component report 
+Module floating_point_adder 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   1048 Bit       Adders := 1     
+	   3 Input   1048 Bit       Adders := 1     
+	   2 Input     11 Bit       Adders := 1     
+	   2 Input      9 Bit       Adders := 2     
+	   3 Input      9 Bit       Adders := 2     
++---Registers : 
+	             1048 Bit    Registers := 4     
+	               32 Bit    Registers := 1     
+	               25 Bit    Registers := 2     
+	                9 Bit    Registers := 2     
+	                8 Bit    Registers := 2     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input   1048 Bit        Muxes := 16    
+	   8 Input   1048 Bit        Muxes := 3     
+	   8 Input      9 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 3     
+	   2 Input      8 Bit        Muxes := 2     
+	   8 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 5     
+	   8 Input      1 Bit        Muxes := 11    
+	   2 Input      1 Bit        Muxes := 13    
+Module floating_point_adder_ip_v1_0_S_AXI 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 7     
+	                5 Bit    Registers := 2     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 6     
+	   8 Input     32 Bit        Muxes := 6     
+	   2 Input      1 Bit        Muxes := 5     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-3331] design system_floating_point_adder_0_0 has unconnected port s_axi_awprot[2]
+WARNING: [Synth 8-3331] design system_floating_point_adder_0_0 has unconnected port s_axi_awprot[1]
+WARNING: [Synth 8-3331] design system_floating_point_adder_0_0 has unconnected port s_axi_awprot[0]
+WARNING: [Synth 8-3331] design system_floating_point_adder_0_0 has unconnected port s_axi_arprot[2]
+WARNING: [Synth 8-3331] design system_floating_point_adder_0_0 has unconnected port s_axi_arprot[1]
+WARNING: [Synth 8-3331] design system_floating_point_adder_0_0 has unconnected port s_axi_arprot[0]
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fp_adder_insti_0/\sum_mantissa_aux_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fp_adder_insti_0/\sum_mantissa_aux_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fp_adder_insti_0/\sum_mantissa_aux_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fp_adder_insti_0/\sum_mantissa_aux_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fp_adder_insti_0/\sum_mantissa_aux_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fp_adder_insti_0/\sum_mantissa_aux_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fp_adder_insti_0/\sum_mantissa_aux_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fp_adder_insti_0/\sum_mantissa_aux_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fp_adder_insti_0/\sum_mantissa_aux_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fp_adder_insti_0/\sum_mantissa_aux_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fp_adder_insti_0/\sum_mantissa_aux_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fp_adder_insti_0/\sum_mantissa_aux_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fp_adder_insti_0/\sum_mantissa_aux_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fp_adder_insti_0/\sum_mantissa_aux_reg[13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fp_adder_insti_0/\sum_mantissa_aux_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fp_adder_insti_0/\sum_mantissa_aux_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fp_adder_insti_0/\sum_mantissa_aux_reg[16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fp_adder_insti_0/\sum_mantissa_aux_reg[17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fp_adder_insti_0/\sum_mantissa_aux_reg[18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fp_adder_insti_0/\sum_mantissa_aux_reg[19] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fp_adder_insti_0/\sum_mantissa_aux_reg[20] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fp_adder_insti_0/\sum_mantissa_aux_reg[21] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fp_adder_insti_0/\sum_mantissa_aux_reg[22] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fp_adder_insti_0/\sum_mantissa_aux_reg[23] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fp_adder_insti_0/\sum_mantissa_aux_reg[24] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fp_adder_insti_0/\sum_mantissa_aux_reg[25] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fp_adder_insti_0/\sum_mantissa_aux_reg[26] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fp_adder_insti_0/\sum_mantissa_aux_reg[27] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fp_adder_insti_0/\sum_mantissa_aux_reg[28] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fp_adder_insti_0/\sum_mantissa_aux_reg[29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fp_adder_insti_0/\sum_mantissa_aux_reg[30] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fp_adder_insti_0/\sum_mantissa_aux_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fp_adder_insti_0/\sum_mantissa_aux_reg[32] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fp_adder_insti_0/\sum_mantissa_aux_reg[33] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fp_adder_insti_0/\sum_mantissa_aux_reg[34] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fp_adder_insti_0/\sum_mantissa_aux_reg[35] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fp_adder_insti_0/\sum_mantissa_aux_reg[36] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fp_adder_insti_0/\sum_mantissa_aux_reg[37] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fp_adder_insti_0/\sum_mantissa_aux_reg[38] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fp_adder_insti_0/\sum_mantissa_aux_reg[39] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fp_adder_insti_0/\sum_mantissa_aux_reg[40] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fp_adder_insti_0/\sum_mantissa_aux_reg[41] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fp_adder_insti_0/\sum_mantissa_aux_reg[42] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fp_adder_insti_0/\sum_mantissa_aux_reg[43] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fp_adder_insti_0/\sum_mantissa_aux_reg[44] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fp_adder_insti_0/\sum_mantissa_aux_reg[45] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fp_adder_insti_0/\sum_mantissa_aux_reg[46] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fp_adder_insti_0/\sum_mantissa_aux_reg[47] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fp_adder_insti_0/\sum_mantissa_aux_reg[48] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fp_adder_insti_0/\sum_mantissa_aux_reg[49] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fp_adder_insti_0/\sum_mantissa_aux_reg[50] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fp_adder_insti_0/\sum_mantissa_aux_reg[51] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fp_adder_insti_0/\sum_mantissa_aux_reg[52] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fp_adder_insti_0/\sum_mantissa_aux_reg[53] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fp_adder_insti_0/\sum_mantissa_aux_reg[54] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fp_adder_insti_0/\sum_mantissa_aux_reg[55] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fp_adder_insti_0/\sum_mantissa_aux_reg[56] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fp_adder_insti_0/\sum_mantissa_aux_reg[57] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fp_adder_insti_0/\sum_mantissa_aux_reg[58] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fp_adder_insti_0/\sum_mantissa_aux_reg[59] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fp_adder_insti_0/\sum_mantissa_aux_reg[60] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fp_adder_insti_0/\sum_mantissa_aux_reg[61] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fp_adder_insti_0/\sum_mantissa_aux_reg[62] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fp_adder_insti_0/\sum_mantissa_aux_reg[63] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fp_adder_insti_0/\sum_mantissa_aux_reg[64] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fp_adder_insti_0/\sum_mantissa_aux_reg[65] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fp_adder_insti_0/\sum_mantissa_aux_reg[66] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fp_adder_insti_0/\sum_mantissa_aux_reg[67] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fp_adder_insti_0/\sum_mantissa_aux_reg[68] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fp_adder_insti_0/\sum_mantissa_aux_reg[69] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fp_adder_insti_0/\sum_mantissa_aux_reg[70] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fp_adder_insti_0/\sum_mantissa_aux_reg[71] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fp_adder_insti_0/\sum_mantissa_aux_reg[72] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fp_adder_insti_0/\sum_mantissa_aux_reg[73] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fp_adder_insti_0/\sum_mantissa_aux_reg[74] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fp_adder_insti_0/\sum_mantissa_aux_reg[75] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fp_adder_insti_0/\sum_mantissa_aux_reg[76] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fp_adder_insti_0/\sum_mantissa_aux_reg[77] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fp_adder_insti_0/\sum_mantissa_aux_reg[78] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fp_adder_insti_0/\sum_mantissa_aux_reg[79] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fp_adder_insti_0/\sum_mantissa_aux_reg[80] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fp_adder_insti_0/\sum_mantissa_aux_reg[81] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fp_adder_insti_0/\sum_mantissa_aux_reg[82] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fp_adder_insti_0/\sum_mantissa_aux_reg[83] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fp_adder_insti_0/\sum_mantissa_aux_reg[84] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fp_adder_insti_0/\sum_mantissa_aux_reg[85] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fp_adder_insti_0/\sum_mantissa_aux_reg[86] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fp_adder_insti_0/\sum_mantissa_aux_reg[87] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fp_adder_insti_0/\sum_mantissa_aux_reg[88] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fp_adder_insti_0/\sum_mantissa_aux_reg[89] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fp_adder_insti_0/\sum_mantissa_aux_reg[90] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fp_adder_insti_0/\sum_mantissa_aux_reg[91] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fp_adder_insti_0/\sum_mantissa_aux_reg[92] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fp_adder_insti_0/\sum_mantissa_aux_reg[93] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fp_adder_insti_0/\sum_mantissa_aux_reg[94] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fp_adder_insti_0/\sum_mantissa_aux_reg[95] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fp_adder_insti_0/\sum_mantissa_aux_reg[96] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fp_adder_insti_0/\sum_mantissa_aux_reg[97] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fp_adder_insti_0/\sum_mantissa_aux_reg[98] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fp_adder_insti_0/\sum_mantissa_aux_reg[99] )
+INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3886] merging instance 'fp_adder_insti_1/mantissa_b_reg[23]' (FDE) to 'fp_adder_insti_1/mantissa_a_reg[23]'
+INFO: [Synth 8-3886] merging instance 'fp_adder_insti_1/mantissa_b_reg[24]' (FDE) to 'fp_adder_insti_1/mantissa_a_reg[24]'
+INFO: [Synth 8-3886] merging instance 'floating_point_adder_ip_v1_0_S_AXI_insti_3/axi_rresp_reg[0]' (FDRE) to 'floating_point_adder_ip_v1_0_S_AXI_insti_3/axi_rresp_reg[1]'
+INFO: [Synth 8-3886] merging instance 'floating_point_adder_ip_v1_0_S_AXI_insti_3/axi_bresp_reg[0]' (FDRE) to 'floating_point_adder_ip_v1_0_S_AXI_insti_3/axi_bresp_reg[1]'
+INFO: [Synth 8-3886] merging instance 'fp_adder_insti_0/mantissa_b_aux_reg[1047]' (FDE) to 'fp_adder_insti_0/mantissa_a_aux_reg[1047]'
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:00:46 . Memory (MB): peak = 1685.711 ; gain = 511.230 ; free physical = 3081 ; free virtual = 17297
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+----------------------------------------+------------+----------+
+|      |RTL Partition                           |Replication |Instances |
++------+----------------------------------------+------------+----------+
+|1     |floating_point_adder__GB0               |           1|      9949|
+|2     |floating_point_adder__GB1               |           1|      5736|
+|3     |floating_point_adder__GB2               |           1|      6481|
+|4     |floating_point_adder_ip_v1_0_S_AXI__GC0 |           1|       554|
++------+----------------------------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:40 ; elapsed = 00:00:54 . Memory (MB): peak = 1685.711 ; gain = 511.230 ; free physical = 3640 ; free virtual = 17918
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:40 ; elapsed = 00:00:54 . Memory (MB): peak = 1685.711 ; gain = 511.230 ; free physical = 3640 ; free virtual = 17918
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+----------------------------------------+------------+----------+
+|      |RTL Partition                           |Replication |Instances |
++------+----------------------------------------+------------+----------+
+|1     |floating_point_adder__GB0               |           1|      9949|
+|2     |floating_point_adder__GB1               |           1|      5736|
+|3     |floating_point_adder__GB2               |           1|      6481|
+|4     |floating_point_adder_ip_v1_0_S_AXI__GC0 |           1|       554|
++------+----------------------------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3332] Sequential element (U0/floating_point_adder_ip_v1_0_S_AXI_inst/fp_adder_inst/sum_exponent_reg[8]) is unused and will be removed from module system_floating_point_adder_0_0.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:41 ; elapsed = 00:00:56 . Memory (MB): peak = 1685.711 ; gain = 511.230 ; free physical = 3647 ; free virtual = 17913
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:42 ; elapsed = 00:00:56 . Memory (MB): peak = 1685.711 ; gain = 511.230 ; free physical = 3643 ; free virtual = 17909
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:42 ; elapsed = 00:00:56 . Memory (MB): peak = 1685.711 ; gain = 511.230 ; free physical = 3643 ; free virtual = 17908
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:42 ; elapsed = 00:00:57 . Memory (MB): peak = 1685.711 ; gain = 511.230 ; free physical = 3642 ; free virtual = 17907
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:42 ; elapsed = 00:00:57 . Memory (MB): peak = 1685.711 ; gain = 511.230 ; free physical = 3642 ; free virtual = 17907
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:42 ; elapsed = 00:00:57 . Memory (MB): peak = 1685.711 ; gain = 511.230 ; free physical = 3641 ; free virtual = 17906
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:42 ; elapsed = 00:00:57 . Memory (MB): peak = 1685.711 ; gain = 511.230 ; free physical = 3640 ; free virtual = 17906
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |CARRY4 |   499|
+|2     |LUT1   |     2|
+|3     |LUT2   |   659|
+|4     |LUT3   |   498|
+|5     |LUT4   |  1705|
+|6     |LUT5   |  1815|
+|7     |LUT6   |  1616|
+|8     |MUXF7  |    32|
+|9     |FDCE   |    36|
+|10    |FDRE   |  2454|
+|11    |FDSE   |     3|
++------+-------+------+
+
+Report Instance Areas: 
++------+--------------------------------------------+-----------------------------------+------+
+|      |Instance                                    |Module                             |Cells |
++------+--------------------------------------------+-----------------------------------+------+
+|1     |top                                         |                                   |  9319|
+|2     |  U0                                        |floating_point_adder_ip_v1_0       |  9319|
+|3     |    floating_point_adder_ip_v1_0_S_AXI_inst |floating_point_adder_ip_v1_0_S_AXI |  9319|
+|4     |      fp_adder_inst                         |floating_point_adder               |  8951|
++------+--------------------------------------------+-----------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:42 ; elapsed = 00:00:57 . Memory (MB): peak = 1685.711 ; gain = 511.230 ; free physical = 3640 ; free virtual = 17906
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 7 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:33 ; elapsed = 00:00:37 . Memory (MB): peak = 1685.711 ; gain = 143.609 ; free physical = 3698 ; free virtual = 17964
+Synthesis Optimization Complete : Time (s): cpu = 00:00:43 ; elapsed = 00:00:57 . Memory (MB): peak = 1685.711 ; gain = 511.230 ; free physical = 3698 ; free virtual = 17964
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 531 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'system_floating_point_adder_0_0' is not ideal for floorplanning, since the cellview 'floating_point_adder' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+144 Infos, 20 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:45 ; elapsed = 00:00:59 . Memory (MB): peak = 1701.727 ; gain = 546.703 ; free physical = 3694 ; free virtual = 17960
+INFO: [Common 17-1381] The checkpoint '/home/francesco/Desktop/tp/floating_point_adder/floating_point_adder/floating_point_adder.runs/system_floating_point_adder_0_0_synth_1/system_floating_point_adder_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1482] Added synthesis output to IP cache for IP /home/francesco/Desktop/tp/floating_point_adder/floating_point_adder/floating_point_adder.srcs/sources_1/bd/system/ip/system_floating_point_adder_0_0/system_floating_point_adder_0_0.xci
+INFO: [Coretcl 2-1174] Renamed 3 cell refs.
+INFO: [Common 17-1381] The checkpoint '/home/francesco/Desktop/tp/floating_point_adder/floating_point_adder/floating_point_adder.runs/system_floating_point_adder_0_0_synth_1/system_floating_point_adder_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file system_floating_point_adder_0_0_utilization_synth.rpt -pb system_floating_point_adder_0_0_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.11 . Memory (MB): peak = 1725.738 ; gain = 0.000 ; free physical = 3643 ; free virtual = 17917
+INFO: [Common 17-206] Exiting Vivado at Tue Dec  5 02:51:18 2023...

@@ -1,0 +1,9 @@
+vhdl xil_defaultlib  \
+"../../../bd/system/sim/system.vhd" \
+"../../../bd/system/ipshared/60c2/hdl/floating_point_adder_ip_v1_0_S_AXI.vhd" \
+"../../../bd/system/ipshared/60c2/hdl/floating_point_adder_ip_v1_0.vhd" \
+"../../../bd/system/ipshared/60c2/src/floating_point_adder.vhd" \
+"../../../bd/system/ip/system_floating_point_adder_0_0/sim/system_floating_point_adder_0_0.vhd" \
+"../../../bd/system/ip/system_rst_ps7_0_50M_0/sim/system_rst_ps7_0_50M_0.vhd" \
+
+nosort
